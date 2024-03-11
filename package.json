@@ -14,7 +14,7 @@
     "preshow:dist": "npm run build",
     "show:dist": "live-server dist"
   },
-  "author": "coursar",
+  "author": "Igor.Kirillov",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.19.3",

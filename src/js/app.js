@@ -1,20 +1,20 @@
 let intervalId;
 
 document.addEventListener("DOMContentLoaded", () => {
-  intervalId = setInterval(movieImg, 1000);
+  intervalId = setInterval(moveImg, 1000);
 });
 
-function movieImg() {
+function moveImg() {
   const img = document.querySelector(".cell img");
   if (!img) {
     clearInterval(intervalId);
-    alert("Картинка не найдена! Игра остановлена!")
+    alert("Картинка не найдена! Игра остановлена!");
     return;
   }
   const oldCell = img.parentElement;
   const newCell = getNextCell(oldCell);
-  oldCell.removeChild(img);
-  newCell.appendChild(img);
+  oldCell.replaceChildren();
+  newCell.replaceChildren(img);
 }
 
 function getNextCell(currentCell) {
